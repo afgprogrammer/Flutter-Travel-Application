@@ -1,4 +1,3 @@
-import 'package:day11/Animation/FadeAnimation.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(
@@ -43,9 +42,9 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
-                    FadeAnimation(1, Text("What you would like to find?", textAlign: TextAlign.center, style: TextStyle(color: Colors.white, fontSize: 40, fontWeight: FontWeight.bold),)),
+                    Text("What you would like to find?", textAlign: TextAlign.center, style: TextStyle(color: Colors.white, fontSize: 40, fontWeight: FontWeight.bold),),
                     SizedBox(height: 30,),
-                    FadeAnimation(1.3, Container(
+                    Container(
                       padding: EdgeInsets.symmetric(vertical: 3),
                       margin: EdgeInsets.symmetric(horizontal: 40),
                       height: 50,
@@ -61,7 +60,7 @@ class _HomePageState extends State<HomePage> {
                           hintText: "Search for cities, places ..."
                         ),
                       ),
-                    )),
+                    ),
                     SizedBox(height: 30,)
                   ],
                 ),
@@ -73,9 +72,9 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  FadeAnimation(1, Text("Best Destination", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey[800], fontSize: 20),)),
+                  Text("Best Destination", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey[800], fontSize: 20),),
                   SizedBox(height: 20,),
-                  FadeAnimation(1.4, Container(
+                  Container(
                     height: 200,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
@@ -86,12 +85,12 @@ class _HomePageState extends State<HomePage> {
                         makeItem(image: 'assets/images/united-states.jpg', title: 'United States')
                       ],
                     ),
-                  )),
+                  ),
 
                   SizedBox(height: 20,),
-                  FadeAnimation(1, Text("Best Hotels", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey[800], fontSize: 20),)),
+                  Text("Best Hotels", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey[800], fontSize: 20),),
                   SizedBox(height: 20,),                
-                  FadeAnimation(1.4, Container(
+                  Container(
                     height: 200,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
@@ -102,7 +101,24 @@ class _HomePageState extends State<HomePage> {
                         makeItem(image: 'assets/images/canada.jpg', title: 'United States')
                       ],
                     ),
-                  )),
+                  ),
+                  SizedBox(height: 20,),
+                  Text("Popular", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey[800], fontSize: 20),),
+                  SizedBox(height: 20,),
+                  Container(
+                    height: 200,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: <Widget>[
+                        makeItem(image: 'assets/images/greece.jpg', title: 'Greece'),
+                        makeItem(image: 'assets/images/united-states.jpg', title: 'United States'),
+                        makeItem(image: 'assets/images/Italy.jpg', title: 'Italy'),
+                        makeItem(image: 'assets/images/canada.jpg', title: 'Canada'),
+                      ],
+                    ),
+                  ),
+
+                  SizedBox(height: 20,),
                   SizedBox(height: 80,),
                 ],
               ),
